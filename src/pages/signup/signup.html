@@ -1,0 +1,82 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>REGISTER PAGE</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content >
+  
+  <div class="yoga">
+    <ion-img width="90" height="90" src="assets/imgs/logo2.png"></ion-img>
+    </div>
+    <ion-label class="Reg" >Register</ion-label>
+      <ion-label class="l2">
+        Enter your login detail to access your account
+      </ion-label>
+<ion-item>
+  <ion-label floating>Full Name</ion-label>
+  <ion-input type="text" [(ngModel)]="fname"></ion-input>
+</ion-item>
+
+
+<ion-item>
+  <ion-label floating> Email </ion-label>
+  <ion-input type="text"  [(ngModel)]="email"></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label floating> Password </ion-label>
+  <ion-input type="password" [(ngModel)]="password"></ion-input>
+</ion-item>
+
+<ion-item class="itemclass">
+  <ion-label color="primary" floating>Language</ion-label>
+
+  <ion-select [(ngModel)]="language">
+      
+      <ion-option>English</ion-option>
+      <ion-option>Gujarati</ion-option>
+      <ion-option>Hindi</ion-option>
+      
+  </ion-select>
+</ion-item>
+
+<ion-item >
+  <ion-label color="primary" floating>Birth Date </ion-label>
+  <ion-input type="text" [(ngModel)]="birthdate"></ion-input>
+</ion-item>
+
+
+<button ion-button color="light" (click)="picker.open()" icon-only>
+  <ion-datetime #picker pickerFormat="DD-MMM-YYYY" [(ngModel)]="myDate" (ionChange)="changeDate()" hidden="true"
+    min="1940" max="2040"></ion-datetime>
+  <ion-icon name="calendar"></ion-icon>
+</button>
+
+<ion-label> Gender </ion-label>
+    <ion-row  radio-group [(ngModel)]="gender">
+        <ion-col>
+            <ion-item no-lines>
+                <ion-label>Male</ion-label>
+                <ion-radio value="Male"> </ion-radio>
+            </ion-item>
+        </ion-col>
+        <ion-col>
+            <ion-item no-lines>
+                <ion-label>Female</ion-label>
+                <ion-radio value="Female"></ion-radio>
+            </ion-item>
+        </ion-col>
+    </ion-row>
+
+
+
+<ion-item>
+  <p>
+    <button ion-button full round color="danger" (click)=doregister()>REGISTER</button>
+  </p>
+</ion-item>
+
+
+  </ion-content>

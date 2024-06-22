@@ -1,0 +1,7 @@
+{
+  "name": "Ionic3project",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "custom"
+}

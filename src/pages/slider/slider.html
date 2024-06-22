@@ -1,0 +1,14 @@
+<ion-content>
+  <ion-slides pager="true">
+    <ion-slide *ngFor="let slide of slider">
+      <ion-toolbar>
+        <ion-buttons end>
+          <button ion-button color="danger" (click)=gohome()>Skip</button>
+        </ion-buttons>
+      </ion-toolbar>
+      <img [src]="slide.image"/>
+      <h2 [innerHTML]="slide.title"></h2>
+      <p [innerHTML]="slide.description"></p>
+     </ion-slide>
+     </ion-slides>
+</ion-content>
