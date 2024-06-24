@@ -76,7 +76,7 @@ export class DashboardPage {
               }
             }
           })
-          .catch(e => { });
+          .catch(error => { console.log(error) });
       })
       .catch(e => alert("Create Database Error"));
   }
